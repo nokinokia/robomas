@@ -1,0 +1,214 @@
+body {
+    margin: 0;
+    font-family: 'Condiment', cursive;
+    background: #f0f0f0;
+    color: #ffffff;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+.condiment-regular {
+    font-family: "Condiment", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.section {
+    position: relative;
+    padding: 50px 20px;
+    text-align: center;
+    overflow: hidden; /* Prevent content from overflowing */
+    width: 100%; /* Ensure the section stays within the viewport width */
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+    z-index: -1;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px; /* Limit content width */
+    margin: 0 auto; /* Center content */
+    overflow: hidden; /* Prevent content from overflowing */
+}
+
+.main .animated-text {
+    font-size: 2.5em;
+    animation: textMove 2s infinite;
+}
+
+.main-photo {
+    max-width: 10%;
+    height: auto;
+    margin: 20px 0;
+}
+
+.side-text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3em;
+    color: #fff;
+    z-index: 2;
+    white-space: nowrap;
+}
+
+.side-text.left {
+    left: 10px;
+}
+
+.side-text.right {
+    right: 10px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    color: #ff0000;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.about .content, .services .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%; /* Ensure the content stays within the viewport width */
+}
+
+.about-box, .services-box {
+    width: 45%;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.about .scroll-animated, .services .scroll-animated {
+    opacity: 0;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.about-photo, .services-photo {
+    max-width: 15%;
+    height: auto;
+    margin-right: 20%;
+}
+
+.gallery-wrapper {
+    width: 100%; /* Ensure the gallery takes the full width */
+    overflow: hidden; /* Prevent horizontal overflow */
+}
+
+.gallery-row {
+    display: flex;
+    justify-content: space-around; /* Distribute space between images */
+    width: 100%; /* Ensure each row takes the full width */
+    height: 1000%;
+}
+
+.gallery-row img {
+    width: 10%; /* Adjust image width to be smaller */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 5px; /* Add space between images */
+    object-fit: cover; /* Ensure images cover their area */
+}
+
+.row1 {
+    animation: rowMove1 15s linear infinite;
+}
+
+.row2 {
+    animation: rowMove2 15s linear infinite;
+}
+
+.row3 {
+    animation: rowJump 2s linear infinite;
+}
+
+@keyframes rowMove1 {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+@keyframes rowMove2 {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+@keyframes rowJump {
+    0%, 100% { transform: translateY(0); }
+    100% { transform: translateY(-40px); }
+}
+
+
+
+.footer {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+@keyframes textMove {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(10px); }
+}
+
+@keyframes rowMove1 {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+@keyframes rowMove2 {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(100%); }
+}
+
+@keyframes rowJump {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes galleryMove {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+#copy-button {
+    background-color: #8b0eff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 2rem;
+    cursor: pointer;
+    border-radius: 9px;
+    margin-top: 10px;
+    font-family: "UnifrakturCook", cursive;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+#copy-button:hover {
+    background-color: #f79b9b;
+}
+
+#copy-text{
+    background-color: #8b0eff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 2rem;
+    cursor: pointer;
+    border-radius: 9px;
+    margin-top: 10px;
+    font-family: "UnifrakturCook", cursive;
+  font-weight: 700;
+  font-style: normal;
+}
